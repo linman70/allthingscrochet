@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="#6a45b8" name="theme-color"/>
+  <meta content="Two free complete crochet patterns for a pet toy and scarf, plus an interactive crochet yardage calculator." name="description"/>
+  <title>
+   Patterns &amp; Tools | All Things Crochet
+  </title>
+  <link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+  <link crossorigin="" href="https://commons.wikimedia.org" rel="preconnect"/>
+  <link crossorigin="" href="https://upload.wikimedia.org" rel="preconnect"/>
+  <link href="styles.css" rel="stylesheet"/>
+  <script defer="" src="script.js">
+  </script>
+ </head>
+ <body class="page-patterns">
+  <a class="skip-link" href="#main-content">
+   Skip to content
+  </a>
+  <header class="site-header">
+   <div class="shell nav-shell">
+    <a aria-label="All Things Crochet, home" class="brand" href="index.html">
+     <img alt="All Things Crochet logo" src="assets/all-things-crochet-logo.webp"/>
+    </a>
+    <button aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation" class="menu-toggle" type="button">
+     <span>
+     </span>
+     <span>
+     </span>
+     <span>
+     </span>
+    </button>
+    <nav aria-label="Main navigation" class="primary-nav" id="primary-nav">
+     <a class="nav-link" href="index.html">
+      HOME
+     </a>
+     <a class="nav-link" href="amigurumi.html">
+      AMIGURUMI
+     </a>
+     <a class="nav-link" href="tips.html">
+      TIPS
+     </a>
+     <a aria-current="page" class="nav-link is-active" href="patterns-tools.html">
+      PATTERNS &amp; TOOLS
+     </a>
+    </nav>
+   </div>
+  </header>
+  <main id="main-content">
+   <section class="page-hero lavender-hero pattern-hero">
+    <div class="shell page-hero-layout">
+     <div>
+      <span class="eyebrow">
+       ✦ PICK A PROJECT &amp; GET HOOKING
+      </span>
+      <h1>
+       Patterns &amp;
+       <em>
+        helpful tools.
+       </em>
+      </h1>
+      <p>
+       A little planning goes a long way. Estimate your yarn, then turn it into something soft, sweet, and handmade.
+      </p>
+      <a class="button button-primary" href="#yardage-calculator">
+       Try the calculator &darr;
+      </a>
+     </div>
+     <figure class="photo-card page-hero-photo">
+      <img alt="Crocheted hexagon motifs forming a handmade scarf" class="" decoding="async" loading="lazy" onerror="this.closest('figure')?.classList.add('image-error')" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Grannysquarescarf.jpg?width=1000"/>
+     </figure>
+    </div>
+   </section>
+   <section class="section shell utility-section" id="yardage-calculator">
+    <div class="section-heading">
+     <div>
+      <span class="overline">
+       YOUR NEW FAVORITE TOOL
+      </span>
+      <h2>
+       Interactive yardage calculator
+      </h2>
+      <p>
+       Use a small swatch to estimate how much yarn your project may need.
+      </p>
+     </div>
+    </div>
+    <div class="calculator-layout">
+     <form class="calculator-card" id="yardage-form" novalidate="">
+      <div class="calc-title">
+       🧶
+       <h3>
+        Let's do the yarn math
+       </h3>
+      </div>
+      <p class="calc-help">
+       Make a gauge swatch using the stitch and yarn for your project, then weigh it. Enter measurements in inches and weight in grams.
+      </p>
+      <fieldset>
+       <legend>
+        01 &middot; Your swatch
+       </legend>
+       <div class="form-grid">
+        <label>
+         Width (in)
+         <input inputmode="decimal" min="0.1" name="swatchWidth" required="" step="0.1" type="number" value="4"/>
+        </label>
+        <label>
+         Height (in)
+         <input inputmode="decimal" min="0.1" name="swatchHeight" required="" step="0.1" type="number" value="4"/>
+        </label>
+        <label>
+         Swatch weight (g)
+         <input inputmode="decimal" min="0.1" name="swatchWeight" required="" step="0.1" type="number" value="6"/>
+        </label>
+       </div>
+      </fieldset>
+      <fieldset>
+       <legend>
+        02 &middot; Finished project size
+       </legend>
+       <div class="form-grid">
+        <label>
+         Width (in)
+         <input inputmode="decimal" min="0.1" name="projectWidth" required="" step="0.1" type="number" value="7"/>
+        </label>
+        <label>
+         Length (in)
+         <input inputmode="decimal" min="0.1" name="projectHeight" required="" step="0.1" type="number" value="60"/>
+        </label>
+       </div>
+      </fieldset>
+      <fieldset>
+       <legend>
+        03 &middot; Your yarn label
+       </legend>
+       <div class="form-grid">
+        <label>
+         Yards per skein
+         <input inputmode="decimal" min="0.1" name="skeinYards" required="" step="0.1" type="number" value="220"/>
+        </label>
+        <label>
+         Grams per skein
+         <input inputmode="decimal" min="0.1" name="skeinGrams" required="" step="0.1" type="number" value="100"/>
+        </label>
+        <label>
+         Extra allowance (%)
+         <input max="200" min="0" name="buffer" required="" step="1" type="number" value="15"/>
+        </label>
+       </div>
+      </fieldset>
+      <div class="button-row">
+       <button class="button button-primary" type="submit">
+        Calculate yardage &rarr;
+       </button>
+       <button class="button button-outline" type="reset">
+        Reset
+       </button>
+      </div>
+     </form>
+     <div class="calc-results">
+      <span class="overline">
+       YOUR ESTIMATE
+      </span>
+      <div aria-live="polite" class="result-box">
+       <div class="result-label">
+        Estimated yarn needed
+       </div>
+       <div class="result-value">
+        <span id="result-yards">
+         &mdash;
+        </span>
+        <small>
+         yards
+        </small>
+       </div>
+       <div class="result-row">
+        <span>
+         Approximate yarn weight
+        </span>
+        <strong id="result-grams">
+         &mdash;
+        </strong>
+       </div>
+       <div class="result-row">
+        <span>
+         Whole skeins to buy
+        </span>
+        <strong id="result-skeins">
+         &mdash;
+        </strong>
+       </div>
+       <p class="calc-message" id="calculator-message">
+        Enter your measurements and calculate to see your estimate.
+       </p>
+      </div>
+      <div class="calc-explain">
+       <h3>
+        How the estimate works
+       </h3>
+       <p>
+        We scale the swatch's weight by the area of your project, then use the yarn label's yards-per-gram ratio. Your extra allowance is included in the result.
+       </p>
+       <p>
+        <strong>
+         Keep in mind:
+        </strong>
+        stitch patterns, fringe, shaping, gauge changes, and three-dimensional pieces can change actual yarn use. This tool is best for flat projects, like scarves and blankets.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="pattern-section alternate" id="pet-pattern">
+    <div class="shell">
+     <div class="section-heading">
+      <div>
+       <span class="overline">
+        FREE PATTERN &middot; PETS
+       </span>
+       <h2>
+        Little Kitty Crochet Ball
+       </h2>
+       <p>
+        A small, soft ball for supervised play &mdash; no plastic eyes, buttons, or bells.
+       </p>
+      </div>
+      <button class="button button-outline print-button" type="button">
+       Print this page &nearrow;
+      </button>
+     </div>
+     <div class="pattern-layout">
+      <div class="pattern-copy">
+       <div class="chips">
+        <span class="chip">
+         Easy
+        </span>
+        <span class="chip">
+         US crochet terms
+        </span>
+        <span class="chip">
+         Approx. 2.5 in / 6 cm
+        </span>
+        <span class="chip">
+         About 30&ndash;60 min
+        </span>
+       </div>
+       <h3>
+        Supplies
+       </h3>
+       <ul class="pretty-list">
+        <li>
+         Approx. 20&ndash;30 yards of sturdy washable worsted cotton yarn
+        </li>
+        <li>
+         3.5 mm hook (or size creating a tight fabric), stitch marker
+        </li>
+        <li>
+         Tapestry needle; small amount of fiberfill or washable fabric scraps
+        </li>
+       </ul>
+       <h3>
+        Stitches
+       </h3>
+       <p>
+        MR = magic ring &middot; sc = single crochet &middot; inc = 2 sc in same stitch &middot; dec = invisible decrease.
+       </p>
+       <h3>
+        Instructions
+       </h3>
+       <ol class="steps">
+        <li>
+         R1: 6 sc into MR. (6)
+        </li>
+        <li>
+         R2: Inc in every stitch. (12)
+        </li>
+        <li>
+         R3: [1 sc, inc] &times; 6. (18)
+        </li>
+        <li>
+         R4: [2 sc, inc] &times; 6. (24)
+        </li>
+        <li>
+         R5&ndash;R9: Sc in each stitch around. (24 each)
+        </li>
+        <li>
+         R10: [2 sc, dec] &times; 6. (18)
+        </li>
+        <li>
+         R11: [1 sc, dec] &times; 6. (12) Lightly stuff now.
+        </li>
+        <li>
+         R12: Dec &times; 6. (6) Fasten off with a long tail. Thread through the remaining front loops, pull closed, then bury and secure the tail inside.
+        </li>
+       </ol>
+       <h3>
+        Finishing &amp; safety
+       </h3>
+       <p>
+        Inspect every seam and weave in ends firmly.
+        <strong>
+         Always supervise pets
+        </strong>
+        and remove the toy immediately if it frays or opens. Some pets swallow string or stuffing; never leave yarn toys unattended, and skip this project for pets that chew and ingest fabric. Wash and dry it thoroughly as needed.
+       </p>
+       <p class="pattern-disclaimer">
+        Original pattern by All Things Crochet. Photos are illustrative examples of other hand-crocheted pet-friendly toy ideas, not an exact sample of this ball.
+       </p>
+      </div>
+      <aside class="pattern-side">
+       <figure class="photo-card">
+        <img alt="Soft crocheted yarn ball used as a cat toy" class="" decoding="async" loading="lazy" onerror="this.closest('figure')?.classList.add('image-error')" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Yarn_Ball.jpg?width=1000"/>
+        <figcaption>
+         Crocheted ball inspiration
+        </figcaption>
+       </figure>
+       <figure class="photo-card">
+        <img alt="Crocheted gray mouse cat toy showing another pet-toy idea" class="" decoding="async" loading="lazy" onerror="this.closest('figure')?.classList.add('image-error')" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mindy_Mouse_cat_toy.jpg?width=1000"/>
+        <figcaption>
+         More pet-toy inspiration
+        </figcaption>
+       </figure>
+       <div class="pattern-hint">
+        <span>
+         ♡ PET-SAFE DETAILS
+        </span>
+        <p>
+         Simple, embroidered-free designs with secure seams are safer than toys with detachable decorations &mdash; but supervision is always essential.
+        </p>
+       </div>
+      </aside>
+     </div>
+    </div>
+   </section>
+   <section class="pattern-section" id="scarf-pattern">
+    <div class="shell">
+     <div class="section-heading">
+      <div>
+       <span class="overline">
+        FREE PATTERN &middot; ACCESSORIES
+       </span>
+       <h2>
+        Cozy Weekend Scarf
+       </h2>
+       <p>
+        A soft, textured rectangle that is easy to customize for any length.
+       </p>
+      </div>
+      <button class="button button-outline print-button" type="button">
+       Print this page &nearrow;
+      </button>
+     </div>
+     <div class="pattern-layout">
+      <div class="pattern-copy">
+       <div class="chips">
+        <span class="chip">
+         Confident beginner
+        </span>
+        <span class="chip">
+         US crochet terms
+        </span>
+        <span class="chip">
+         Approx. 7 &times; 60 in
+        </span>
+        <span class="chip">
+         3&ndash;5 hours
+        </span>
+       </div>
+       <h3>
+        Supplies
+       </h3>
+       <ul class="pretty-list">
+        <li>
+         Approx. 350&ndash;425 yards of medium (weight 4) yarn
+        </li>
+        <li>
+         5.5 mm (I/9) crochet hook, or a hook that achieves your preferred drape
+        </li>
+        <li>
+         Tapestry needle, scissors, measuring tape
+        </li>
+       </ul>
+       <h3>
+        Stitches
+       </h3>
+       <p>
+        ch = chain &middot; hdc = half double crochet &middot; BLO = back loop only &middot; st = stitch. A turning chain does not count as a stitch in this pattern.
+       </p>
+       <h3>
+        Instructions
+       </h3>
+       <ol class="steps">
+        <li>
+         Foundation: Ch 24 loosely.
+        </li>
+        <li>
+         Row 1: Hdc in 3rd ch from hook and in each ch across. (22 hdc)
+        </li>
+        <li>
+         Row 2: Ch 2, turn. Hdc in BLO of each st across. (22 hdc)
+        </li>
+        <li>
+         Rows 3 onward: Repeat Row 2 until the scarf measures approximately 60 in (152 cm), or your chosen length.
+        </li>
+        <li>
+         Last row: Ch 1, fasten off. Weave in all yarn ends securely.
+        </li>
+        <li>
+         Optional fringe: Cut 10&ndash;12 in strands, fold them in groups, and loop them evenly through each short end. Trim to match.
+        </li>
+       </ol>
+       <h3>
+        Make it yours
+       </h3>
+       <p>
+        For a wider scarf, add chains in the foundation; each extra chain adds one hdc to every row. For a longer scarf, repeat Row 2. Check the drape after a few rows, and use the yardage calculator above to estimate yarn for your chosen dimensions.
+       </p>
+       <p class="pattern-disclaimer">
+        Original scarf pattern by All Things Crochet. Photos show other crocheted scarves for design inspiration, rather than the exact pattern sample.
+       </p>
+      </div>
+      <aside class="pattern-side">
+       <figure class="photo-card">
+        <img alt="Finished crocheted scarf using textured yarn and a shell border" class="" decoding="async" loading="lazy" onerror="this.closest('figure')?.classList.add('image-error')" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Crochet_novelty_yarn_scarf.jpg?width=1000"/>
+        <figcaption>
+         Crochet scarf inspiration
+        </figcaption>
+       </figure>
+       <figure class="photo-card">
+        <img alt="Crocheted scarf made from hexagon motifs" class="" decoding="async" loading="lazy" onerror="this.closest('figure')?.classList.add('image-error')" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Grannysquarescarf.jpg?width=1000"/>
+        <figcaption>
+         A second scarf style to inspire you
+        </figcaption>
+       </figure>
+       <div class="pattern-hint">
+        <span>
+         ✳ NO-STRESS TIP
+        </span>
+        <p>
+         Measure your first few rows before committing to the full scarf. A small gauge change can make a big difference in the final width.
+        </p>
+       </div>
+      </aside>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="site-footer">
+   <div class="shell footer-grid">
+    <div class="footer-intro">
+     <img alt="All Things Crochet" class="footer-logo" src="assets/all-things-crochet-logo.webp"/>
+     <p>
+      A little yarn, a little joy, and a whole lot of handmade magic.
+     </p>
+    </div>
+    <div class="footer-links">
+     <strong>
+      Explore
+     </strong>
+     <a href="index.html">
+      Home
+     </a>
+     <a href="amigurumi.html">
+      Amigurumi
+     </a>
+     <a href="tips.html">
+      Tips
+     </a>
+     <a href="patterns-tools.html">
+      Patterns &amp; Tools
+     </a>
+    </div>
+    <div class="footer-links">
+     <strong>
+      Made for makers
+     </strong>
+     <a href="amigurumi.html#citrus-pattern">
+      Free amigurumi pattern
+     </a>
+     <a href="patterns-tools.html#yardage-calculator">
+      Yardage calculator
+     </a>
+     <a href="patterns-tools.html#pet-pattern">
+      Pet toy pattern
+     </a>
+     <a href="patterns-tools.html#scarf-pattern">
+      Scarf pattern
+     </a>
+    </div>
+   </div>
+   <div class="shell footer-bottom">
+    <span>
+     &copy; 2026 All Things Crochet &middot; Original tutorials &amp; patterns
+    </span>
+    <details class="credits">
+     <summary>
+      Photo credits &amp; licenses
+     </summary>
+     <p>
+      Photographs are linked from Wikimedia Commons and credited to their creators; some are presented as inspiration rather than exact samples of the original patterns. Click a photo filename to view its license and source. Internet connection required for photos.
+     </p>
+     <ul>
+      <li>
+       <a href="https://commons.wikimedia.org/wiki/File:Grannysquarescarf.jpg" rel="noopener noreferrer" target="_blank">
+        Grannysquarescarf.jpg
+       </a>
+       &mdash; Durova,
+       <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener noreferrer" target="_blank">
+        CC BY-SA 4.0
+       </a>
+      </li>
+      <li>
+       <a href="https://commons.wikimedia.org/wiki/File:Yarn_Ball.jpg" rel="noopener noreferrer" target="_blank">
+        Yarn Ball.jpg
+       </a>
+       &mdash; Maddy,
+       <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="noopener noreferrer" target="_blank">
+        CC0 1.0
+       </a>
+      </li>
+      <li>
+       <a href="https://commons.wikimedia.org/wiki/File:Mindy_Mouse_cat_toy.jpg" rel="noopener noreferrer" target="_blank">
+        Mindy Mouse cat toy.jpg
+       </a>
+       &mdash; Patricia,
+       <a href="https://creativecommons.org/licenses/by/2.0/" rel="noopener noreferrer" target="_blank">
+        CC BY 2.0
+       </a>
+      </li>
+      <li>
+       <a href="https://commons.wikimedia.org/wiki/File:Crochet_novelty_yarn_scarf.jpg" rel="noopener noreferrer" target="_blank">
+        Crochet novelty yarn scarf.jpg
+       </a>
+       &mdash; Durova,
+       <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener noreferrer" target="_blank">
+        CC BY-SA 4.0
+       </a>
+      </li>
+     </ul>
+    </details>
+   </div>
+  </footer>
+ </body>
+</html>
