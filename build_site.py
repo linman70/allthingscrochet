@@ -1,4 +1,3 @@
-
 from pathlib import Path
 from urllib.parse import quote
 from html import escape
